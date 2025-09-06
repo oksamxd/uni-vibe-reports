@@ -4,6 +4,8 @@ import { StatsCard } from "@/components/StatsCard";
 import { EventCard } from "@/components/EventCard";
 import { ReportsSection } from "@/components/ReportsSection";
 import { CreateEventForm } from "@/components/CreateEventForm";
+import { StudentsSection } from "@/components/StudentsSection";
+import { SettingsSection } from "@/components/SettingsSection";
 import { Calendar, Users, BarChart3, Trophy, TrendingUp, UserCheck } from "lucide-react";
 
 // Mock data
@@ -184,20 +186,9 @@ const Index = () => {
       case 'create-event':
         return <CreateEventForm />;
       case 'students':
-        return (
-          <div className="text-center py-20">
-            <Users className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-foreground mb-2">Student Management</h2>
-            <p className="text-muted-foreground">Coming soon - manage student registrations and profiles</p>
-          </div>
-        );
+        return <StudentsSection />;
       case 'settings':
-        return (
-          <div className="text-center py-20">
-            <h2 className="text-2xl font-bold text-foreground mb-2">Settings</h2>
-            <p className="text-muted-foreground">Coming soon - configure your platform preferences</p>
-          </div>
-        );
+        return <SettingsSection />;
       default:
         return renderDashboard();
     }
